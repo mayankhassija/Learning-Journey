@@ -1,3 +1,4 @@
+<pre>
 learning-journey
 |
 └── web-basics
@@ -5,3 +6,4 @@ learning-journey
 
 
 [project-starter]: https://mayankhassija.github.io/Learning-Journey/web-basics/project-starter/
+</pre>
