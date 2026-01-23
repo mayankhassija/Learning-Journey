@@ -1,15 +1,18 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import TVShowcase from './components/TVShowcase';
-import About from './components/About';
-import Projects from './components/Projects';
-import Education from './components/Education';
-import Skills from './components/Skills';
-import Footer from './components/Footer';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import TVShowcase from './components/TVShowcase.jsx';
+import About from './components/About.jsx';
+import Projects from './components/Projects.jsx';
+import Education from './components/Education.jsx';
+import Footer from './components/Footer.jsx';
+import Sidebar from './components/Sidebar.jsx';
+import useScrollAnimations from './hooks/useScrollAnimations.js';
 import './App.css';
 
 function App() {
+  useScrollAnimations();
+
   return (
     <div className="app">
       {/* Animated background grid */}
@@ -28,14 +31,12 @@ function App() {
         
         {/* Main content layout */}
         <div className="main-content">
-          {/* You can keep sidebar if you want, or remove it */}
-          {/* <Sidebar /> */}
+          <Sidebar />
           
           <main className="main-panel">
             <About />
             <Projects />
             <Education />
-            <Skills />
           </main>
         </div>
         

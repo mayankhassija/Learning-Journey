@@ -745,6 +745,7 @@ code, pre, .mono {
   font-size: inherit;
   font-weight: 700;
   background: linear-gradient(120deg, #64ffda, #a8ff6a);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

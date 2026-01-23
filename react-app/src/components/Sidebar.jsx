@@ -46,6 +46,48 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
+      
+      <div id="skills">
+        <h2 className="glitch" data-text="Skills">Skills</h2>
+        <div className="skills-container">
+          <div className="skill-item">
+            <div className="skill-name">Full-Stack Dev <span>85%</span></div>
+            <div className="skill-bar">
+              <div className="skill-level" style={{width: '85%'}}></div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <div className="skill-name">JavaScript <span>90%</span></div>
+            <div className="skill-bar">
+              <div className="skill-level" style={{width: '90%'}}></div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <div className="skill-name">Python <span>80%</span></div>
+            <div className="skill-bar">
+              <div className="skill-level" style={{width: '80%'}}></div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <div className="skill-name">React <span>75%</span></div>
+            <div className="skill-bar">
+              <div className="skill-level" style={{width: '75%'}}></div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <div className="skill-name">Node.js <span>80%</span></div>
+            <div className="skill-bar">
+              <div className="skill-level" style={{width: '80%'}}></div>
+            </div>
+          </div>
+          <div className="skill-item">
+            <div className="skill-name">Database Design <span>70%</span></div>
+            <div className="skill-bar">
+              <div className="skill-level" style={{width: '70%'}}></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </aside>
   );
 };

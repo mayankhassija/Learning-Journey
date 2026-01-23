@@ -51,17 +51,6 @@ const Header = () => {
           tabIndex={0}
         >About</a>
         <a 
-          href="#skills" 
-          className="nav-link" 
-          onClick={(e) => {
-            e.preventDefault();
-            handleScroll('skills');
-            setIsMenuOpen(false);
-          }}
-          aria-label="Navigate to Skills section"
-          tabIndex={0}
-        >Skills</a>
-        <a 
           href="#contact" 
           className="nav-link" 
           onClick={(e) => {

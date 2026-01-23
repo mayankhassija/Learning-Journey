@@ -10,12 +10,12 @@ const TVShowcase = () => {
   const projects = [
     { 
       name: 'Pong Game', 
-      url: '../pongame/index.html',
+      url: 'https://mayankhassija.github.io/pongame/',
       description: 'A classic Pong game built with HTML5 Canvas'
     },
     { 
       name: 'NCERT Downloader', 
-      url: '../NCERT-Textbook-Downloader/index.html',
+      url: 'https://mayankhassija.github.io/NCERT-Textbook-Downloader/',
       description: 'Full-stack application for downloading NCERT textbooks'
     },
   ];
