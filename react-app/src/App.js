@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import Hero from './components/Hero';
+import TVShowcase from './components/TVShowcase';
 import About from './components/About';
 import Projects from './components/Projects';
 import Education from './components/Education';
@@ -17,8 +18,18 @@ function App() {
       <div className="container">
         <Header />
         
+        {/* Hero Section */}
+        <Hero />
+        
+        <hr className="section-divider" />
+        
+        {/* TV Showcase */}
+        <TVShowcase />
+        
+        {/* Main content layout */}
         <div className="main-content">
-          <Sidebar />
+          {/* You can keep sidebar if you want, or remove it */}
+          {/* <Sidebar /> */}
           
           <main className="main-panel">
             <About />

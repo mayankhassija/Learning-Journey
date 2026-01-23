@@ -679,3 +679,430 @@ body {
       grid-template-columns: 1fr;
   }
 }
+
+/* Hero Section Styles */
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  z-index: 2;
+  max-width: 1000px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+/* Profile Image */
+.profile-img-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(45deg, #64ffda, #bd34fe);
+  box-shadow: 0 0 30px rgba(100, 255, 218, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0a192f;
+}
+
+/* Intro Text */
+.intro-area h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ccd6f6;
+}
+
+.gradient-text {
+  font-size: inherit;
+  font-weight: 700;
+  background: linear-gradient(120deg, #64ffda, #a8ff6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typing {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #64ffda;
+  font-family: 'Roboto Mono', monospace;
+  min-height: 2rem;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  margin-left: 2px;
+  transition: opacity 0.2s;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #8892b0;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Social Links in Hero */
+.hero-social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-social-links {
+    justify-content: center;
+  }
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.social-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-btn.github {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-btn.github:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-btn.linkedin {
+  background: rgba(10, 102, 194, 0.2);
+  color: #fff;
+  border: 1px solid rgba(10, 102, 194, 0.4);
+}
+
+.social-btn.linkedin:hover {
+  background: rgba(10, 102, 194, 0.4);
+}
+
+.social-btn.email {
+  background: rgba(100, 255, 218, 0.1);
+  color: #fff;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+.social-btn.email:hover {
+  background: rgba(100, 255, 218, 0.2);
+}
+
+/* Particles Canvas */
+#particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Divider */
+.section-divider {
+  width: 80%;
+  max-width: 800px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.3), transparent);
+  border: none;
+  margin: 0 auto 4rem;
+}
+
+/* TV Showcase Section */
+.tv-showcase-section {
+  padding: 4rem 1rem;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #64ffda;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #8892b0;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+/* TV Setup */
+.tv-setup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  perspective: 1500px;
+}
+
+@media (min-width: 900px) {
+  .tv-setup-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+/* TV Frame */
+.tv-frame {
+  position: relative;
+  background: #2b2b2b;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 8px #1a1a1a,
+    0 20px 50px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 750px;
+  aspect-ratio: 16/9;
+  transition: transform 0.3s;
+}
+
+.tv-frame:hover {
+  transform: scale(1.01);
+}
+
+.tv-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #111;
+}
+
+.tv-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: #fff;
+}
+
+.tv-screen iframe.loaded {
+  opacity: 1;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64ffda;
+  font-family: 'Roboto Mono', monospace;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(100, 255, 218, 0.3);
+  border-radius: 50%;
+  border-top-color: #64ffda;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Remote Control */
+.remote-control {
+  background: #2d2d2d;
+  width: 100%;
+  max-width: 250px;
+  padding: 25px 20px;
+  border-radius: 25px;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    inset 0 2px 3px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: rotateY(-10deg) rotateX(5deg);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.remote-control:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.remote-header {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.brand {
+  color: #555;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.ir-blaster {
+  width: 8px;
+  height: 8px;
+  background: #111;
+  border-radius: 50%;
+  margin: 8px auto 0;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.remote-control:hover .ir-blaster {
+  background: #ff4444;
+  box-shadow: 0 0 8px #ff4444;
+}
+
+.remote-buttons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.remote-btn {
+  background: #3a3a3a;
+  border: none;
+  color: #bbb;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  box-shadow: 0 3px 0 #222;
+}
+
+.remote-btn:hover {
+  background: #444;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.remote-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 #222;
+}
+
+.remote-btn.active {
+  background: #1a1a1a;
+  color: #64ffda;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(3px);
+  border-left: 3px solid #64ffda;
+}
+
+.remote-info {
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.project-description {
+  color: #8892b0;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.remote-hint {
+  color: #666;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+/* Update main-content to work with new layout */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .main-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Adjust header for new design */
+.header {
+  background-color: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Font imports - add to your index.html head */
+/* Already have these:
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+*/
