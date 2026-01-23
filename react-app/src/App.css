@@ -1,12 +1,12 @@
 :root {
-  --primary: #00f3ff;
+  --primary: #64ffda;
   --secondary: #ff00ff;
-  --accent: #00ff9d;
-  --dark: #0a0a1a;
-  --darker: #050510;
+  --accent: #64ffda;
+  --dark: #0a192f;
+  --darker: #0a192f;
   --light: #f0f8ff;
-  --glass: rgba(10, 20, 40, 0.7);
-  --grid-color: rgba(0, 243, 255, 0.1);
+  --glass: rgba(10, 25, 47, 0.7);
+  --grid-color: rgba(100, 255, 218, 0.1);
 }
 
 * {
@@ -16,16 +16,21 @@
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Space Grotesk', 'Rajdhani', sans-serif;
   background-color: var(--darker);
   color: var(--light);
   overflow-x: hidden;
   line-height: 1.6;
   background-image: 
-      radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.05) 0%, transparent 20%),
-      radial-gradient(circle at 90% 80%, rgba(255, 0, 255, 0.05) 0%, transparent 20%),
-      linear-gradient(to bottom, var(--darker), #0a0a2a);
+      radial-gradient(circle at 10% 20%, rgba(100, 255, 218, 0.05) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, rgba(100, 255, 218, 0.05) 0%, transparent 20%),
+      linear-gradient(to bottom, var(--darker), #0a192f);
   min-height: 100vh;
+}
+
+/* Code elements use Roboto Mono */
+code, pre, .mono {
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Animated grid background */

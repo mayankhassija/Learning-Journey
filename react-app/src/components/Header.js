@@ -17,32 +17,62 @@ const Header = () => {
       </div>
       
       <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <a href="#welcome-section" className="nav-link" onClick={(e) => {
-          e.preventDefault();
-          handleScroll('welcome-section');
-          setIsMenuOpen(false);
-        }}>Home</a>
-        <a href="#project-showcase" className="nav-link" onClick={(e) => {
-          e.preventDefault();
-          handleScroll('project-showcase');
-          setIsMenuOpen(false);
-        }}>Projects</a>
-        <a href="#about" className="nav-link" onClick={(e) => {
-          e.preventDefault();
-          handleScroll('about');
-          setIsMenuOpen(false);
-        }}>About</a>
-        <a href="#skills" className="nav-link" onClick={(e) => {
-          e.preventDefault();
-          handleScroll('skills');
-          setIsMenuOpen(false);
-        }}>Skills</a>
-        <a href="#contact" className="nav-link" onClick={(e) => {
-          e.preventDefault();
-          const footer = document.querySelector('.footer');
-          footer.scrollIntoView({ behavior: 'smooth' });
-          setIsMenuOpen(false);
-        }}>Contact</a>
+        <a 
+          href="#welcome-section" 
+          className="nav-link" 
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll('welcome-section');
+            setIsMenuOpen(false);
+          }}
+          aria-label="Navigate to Home section"
+          tabIndex={0}
+        >Home</a>
+        <a 
+          href="#project-showcase" 
+          className="nav-link" 
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll('project-showcase');
+            setIsMenuOpen(false);
+          }}
+          aria-label="Navigate to Projects section"
+          tabIndex={0}
+        >Projects</a>
+        <a 
+          href="#about" 
+          className="nav-link" 
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll('about');
+            setIsMenuOpen(false);
+          }}
+          aria-label="Navigate to About section"
+          tabIndex={0}
+        >About</a>
+        <a 
+          href="#skills" 
+          className="nav-link" 
+          onClick={(e) => {
+            e.preventDefault();
+            handleScroll('skills');
+            setIsMenuOpen(false);
+          }}
+          aria-label="Navigate to Skills section"
+          tabIndex={0}
+        >Skills</a>
+        <a 
+          href="#contact" 
+          className="nav-link" 
+          onClick={(e) => {
+            e.preventDefault();
+            const footer = document.querySelector('.footer');
+            footer.scrollIntoView({ behavior: 'smooth' });
+            setIsMenuOpen(false);
+          }}
+          aria-label="Navigate to Contact section"
+          tabIndex={0}
+        >Contact</a>
       </nav>
     </header>
   );

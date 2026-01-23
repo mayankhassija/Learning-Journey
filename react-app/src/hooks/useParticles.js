@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 
 const useParticles = (canvasId = 'particles') => {
   const animationRef = useRef(null);
+  const isVisibleRef = useRef(true);
 
   useEffect(() => {
     const canvas = document.getElementById(canvasId);
@@ -49,6 +50,11 @@ const useParticles = (canvasId = 'particles') => {
     }
 
     function animate() {
+      if (!isVisibleRef.current) {
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
@@ -56,6 +62,13 @@ const useParticles = (canvasId = 'particles') => {
       }
       animationRef.current = requestAnimationFrame(animate);
     }
+
+    // Handle page visibility
+    const handleVisibilityChange = () => {
+      isVisibleRef.current = document.visibilityState === 'visible';
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     init();
     animate();
@@ -70,6 +83,7 @@ const useParticles = (canvasId = 'particles') => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
